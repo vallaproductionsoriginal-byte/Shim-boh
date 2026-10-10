@@ -1,0 +1,14 @@
+# This repository publishes only binary release documentation.
+*
+!.gitignore
+!README.md
+!LICENSE
+!THIRD_PARTY_NOTICES.md
+!SHA256.txt
+!docs/
+docs/*
+!docs/Shim-boh-interface.png
+!docs/third-party-licenses/
+docs/third-party-licenses/*
+!docs/third-party-licenses/*.txt
+!docs/third-party-licenses/*.md
