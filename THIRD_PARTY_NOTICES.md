@@ -1,6 +1,6 @@
 # Avvisi delle dipendenze
 
-Copyright (c) 2026 Francesco per le parti originali di Shim-boh.
+Copyright (c) 2026 Valla Productions per le parti originali di Shim-boh.
 
 La licenza MIT in `LICENSE` copre esclusivamente le parti originali di Shim-boh e la documentazione del progetto. Non modifica le licenze, i diritti o gli obblighi dei componenti di terze parti incorporati nel plugin.
 
@@ -18,6 +18,7 @@ Il prodotto può includere i seguenti componenti tramite i moduli JUCE. I testi 
 | Componente | Versione nel framework | Licenza | Avviso |
 | --- | --- | --- | --- |
 | VST3 SDK | 3.8.0 | MIT | VST3-SDK-LICENSE.txt |
+| Apple AudioUnitSDK (nel bundle AU) | Copia inclusa in JUCE 9.0.3 | Apache-2.0 | AudioUnitSDK-LICENSE.txt, AudioUnitSDK-JUCE-UPSTREAM.txt |
 | zlib | 1.3.2 | Zlib | zlib-LICENSE.txt |
 | HarfBuzz | 14.2.1 | MIT Modern Variant | HarfBuzz-COPYING.txt |
 | SheenBidi | 2.9.0 | Apache-2.0 | SheenBidi-LICENSE.txt |
