@@ -2,11 +2,11 @@
 
 Copyright (c) 2026 Valla Productions per le parti originali di Shim-boh.
 
-La licenza MIT in `LICENSE` copre esclusivamente le parti originali di Shim-boh e la documentazione del progetto. Non modifica le licenze, i diritti o gli obblighi dei componenti di terze parti incorporati nel plugin.
+La licenza proprietaria in `LICENSE` copre esclusivamente le parti originali di Shim-boh e la documentazione del progetto. Non modifica le licenze, i diritti o gli obblighi dei componenti di terze parti incorporati nel plugin.
 
 ## JUCE
 
-Shim-boh utilizza JUCE 9.0.3, Copyright (c) Raw Material Software Limited, con licenza commerciale JUCE Starter del produttore. JUCE non viene rilicenziato MIT. I destinatari possono usare e ridistribuire il prodotto compilato secondo i termini applicabili; questa distribuzione non concede una licenza di sviluppo sul framework.
+Shim-boh utilizza JUCE 9.0.3, Copyright (c) Raw Material Software Limited, con licenza commerciale JUCE Starter del produttore. JUCE mantiene la propria licenza. L'uso e la redistribuzione delle parti originali del prodotto compilato sono soggetti alla licenza proprietaria in `LICENSE`; questa distribuzione non concede una licenza di sviluppo sul framework.
 
 Termini: https://juce.com/legal/juce-9-licence/
 Avviso originale: `docs/third-party-licenses/JUCE-LICENSE.md`.

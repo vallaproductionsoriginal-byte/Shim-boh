@@ -50,7 +50,7 @@ Il bypass del pitch mantiene il riverbero attivo; BYPASS in alto disattiva l'eff
 
 Questo repository distribuisce i tre archivi dei plugin compilati e la relativa documentazione, con lo screenshot dell'interfaccia. Il codice sorgente del plugin non è distribuito.
 
-La [licenza delle parti originali](LICENSE), le [note sulle licenze](LICENSE_NOTES.md) e gli [avvisi delle dipendenze](THIRD_PARTY_NOTICES.md) sono disponibili nella repo. I testi delle licenze e gli avvisi sono inclusi anche nelle risorse interne di ciascun bundle, in `Contents/Resources`. JUCE e le altre dipendenze mantengono le proprie licenze.
+La [licenza proprietaria delle parti originali](LICENSE), le [note sulle licenze](LICENSE_NOTES.md) e gli [avvisi delle dipendenze](THIRD_PARTY_NOTICES.md) sono disponibili nella repo. I testi delle licenze e gli avvisi sono inclusi anche nelle risorse interne di ciascun bundle, in `Contents/Resources`. JUCE e le altre dipendenze mantengono le proprie licenze.
 
 ## Segnalazioni
 
