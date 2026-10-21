@@ -10,14 +10,58 @@ Riverbero shimmer di **Valla Productions**, **gratuito** nei formati **VST3 per 
 
 ## Installazione macOS
 
-1. Scarica ed estrai lo ZIP del formato desiderato dalla release.
-2. Per VST3, copia **l'intera cartella** `Shim-boh.vst3` in `~/Library/Audio/Plug-Ins/VST3/`. Per Audio Unit, copia **l'intera cartella** `Shim-boh.component` in `~/Library/Audio/Plug-Ins/Components/`. In Finder puoi raggiungere la cartella con **Vai → Vai alla cartella**.
-3. Riavvia la DAW o ripeti la scansione dei plugin. Se il nuovo AU non compare, esci dalla DAW e riavvia il Mac per aggiornare la registrazione Audio Unit.
-4. Cerca **Shim-boh**, produttore **Valla Productions**, categoria **Reverb**.
+Richiede **macOS 11 o successivo e un Mac con chip Apple Silicon (M1 o successivo)**. Apri il tuo programma audio (DAW) in modalità nativa Apple Silicon, senza Rosetta. La build non supporta i Mac Intel.
 
-Avvia la DAW in modalità Apple Silicon. La build macOS non include supporto Intel o un'applicazione standalone.
+### 1. Copia il plugin nella cartella corretta
 
-Il bundle è firmato ad hoc, non notarizzato e non firmato con un certificato Developer ID. macOS o la DAW possono richiedere l'autorizzazione al caricamento del plugin; una firma ad hoc non equivale a una verifica Apple.
+1. Chiudi la DAW.
+2. Scarica lo ZIP macOS dai link in alto: **AU** per Logic Pro e GarageBand, oppure **VST3** per le DAW che supportano questo formato. Puoi installare entrambi.
+3. Fai doppio clic sullo ZIP per estrarlo.
+4. Nel **Finder**, premi **⇧⌘G** (Maiuscole + Comando + G), oppure scegli **Vai → Vai alla cartella**. Incolla il percorso del formato scelto e premi Invio:
+
+   | Formato | Elemento da copiare per intero | Cartella di destinazione |
+   | --- | --- | --- |
+   | Audio Unit (AU) | `Shim-boh.component` | `~/Library/Audio/Plug-Ins/Components/` |
+   | VST3 | `Shim-boh.vst3` | `~/Library/Audio/Plug-Ins/VST3/` |
+
+5. Trascina nella destinazione **l'intero elemento estratto**, senza aprirlo né spostare i file al suo interno. Se la cartella di destinazione non esiste, apri `~/Library/` con lo stesso comando del Finder e crea le sottocartelle mancanti `Audio`, `Plug-Ins` e `Components` oppure `VST3`.
+6. Riapri la DAW e cerca **Shim-boh**, produttore **Valla Productions**, categoria **Reverb**. Se macOS ne blocca il caricamento, segui la sezione qui sotto.
+
+Il simbolo `~` indica la tua cartella utente: questi percorsi installano il plugin solo per il tuo account. Shim-boh si usa all'interno della DAW; non è un'app da aprire con un doppio clic.
+
+### 2. Se macOS blocca il plugin: sviluppatore non verificato
+
+**I plugin non sono firmati con un certificato Apple Developer ID e non sono notarizzati da Apple.** Usano una firma locale (*ad hoc*), che non equivale alla verifica di Apple. Per questo macOS può mostrare un avviso sullo sviluppatore non verificato o sull'impossibilità di verificare la presenza di software dannoso.
+
+Dopo aver provato a caricare Shim-boh nella DAW:
+
+1. Apri ** → Impostazioni di Sistema → Privacy e sicurezza** e scorri fino alla sezione **Sicurezza**. Su macOS 11 e 12 il percorso è **Preferenze di Sistema → Sicurezza e Privacy → Generali**.
+2. Se compare un avviso relativo a **Shim-boh**, premi **Apri comunque** e conferma l'autorizzazione, se richiesta.
+3. Chiudi e riapri la DAW, quindi ripeti la scansione dei plugin.
+
+La procedura di autorizzazione è descritta anche nella [guida ufficiale Apple](https://support.apple.com/it-it/102445).
+
+Se il pulsante non compare o il plugin resta bloccato, puoi rimuovere la quarantena dal **solo plugin installato**. Fallo soltanto sulla copia scaricata dalle [release ufficiali di Shim-boh](https://github.com/vallaproductionsoriginal-byte/Shim-boh/releases).
+
+Chiudi la DAW, apri **Terminale** (premi **⌘Spazio**, scrivi `Terminale` e premi Invio), quindi copia il comando del formato che hai installato e premi Invio. Se hai installato entrambi i formati, esegui entrambi i comandi, uno alla volta.
+
+**Per Audio Unit (AU):**
+
+```sh
+xattr -dr com.apple.quarantine "$HOME/Library/Audio/Plug-Ins/Components/Shim-boh.component"
+```
+
+**Per VST3:**
+
+```sh
+xattr -dr com.apple.quarantine "$HOME/Library/Audio/Plug-Ins/VST3/Shim-boh.vst3"
+```
+
+Se il comando termina senza messaggi, puoi proseguire. Se leggi `No such file or directory`, controlla di aver copiato il plugin nella cartella indicata nella tabella. I comandi non richiedono `sudo` né la password di amministratore; rimuovono solo l'attributo di quarantena di Shim-boh e non aggiungono una certificazione Apple. Non serve disattivare Gatekeeper o altre protezioni del Mac.
+
+### 3. Se il plugin non compare nella DAW
+
+Riapri la DAW ed esegui una nuova scansione dal suo gestore dei plugin; se Shim-boh è stato escluso dopo il primo tentativo, selezionalo e ripeti la scansione. Per l'Audio Unit, se ancora non compare, chiudi la DAW e riavvia il Mac per aggiornare la registrazione AU. Verifica anche di usare la DAW in modalità Apple Silicon e il formato compatibile con il tuo programma.
 
 ## Installazione Windows x64
 
